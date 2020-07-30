@@ -1,0 +1,220 @@
+body {
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #222;
+	background: #0575e6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #021b79, #0575e6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#021b79,
+		#0575e6
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.scoreboard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	border-radius: 25px;
+}
+.displayScore {
+	display: flex;
+	justify-content: space-between;
+}
+.left {
+	display: flex;
+	justify-content: space-around;
+}
+.right {
+	display: flex;
+	justify-content: center;
+}
+.scoreboard *,
+.buttons * {
+	padding: 5px;
+	margin: 10px;
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background-color: white;
+	border-radius: 25px;
+	box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+.buttons button,
+#reset {
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid black;
+}
+.players {
+	font-size: 2em;
+	font-weight: 500;
+}
+.buttons button:hover,
+#reset:hover {
+	transition: all 0.8s;
+	background-color: black;
+	outline: none;
+}
+.buttons button:hover i,
+#reset:hover i {
+	color: white;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 100px 50px;
+	width: 90%;
+	height: 10%;
+}
+.container * {
+	margin: 10px;
+}
+i {
+	color: black;
+	font-size: 25px;
+}
+/* css for popup box */
+.popup .overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+	display: none;
+}
+.popup .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: black;
+	transform: translate(-50%, -50%) scale(0);
+	background: #fff;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 15px;
+}
+
+h2{
+	font-weight: 300;
+}
+.popup .close-btn {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	background: #222;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+}
+.popup.active .overlay {
+	display: block;
+}
+.popup.active .content {
+	transition: all 350ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+}
+.popup button {
+	margin-top: 50px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-radius: 35px;
+	cursor: pointer;
+	color: white;
+	background-color: black;
+	height: 60px;
+	width: 20%;
+	outline: none;
+}
+
+/* styling the input range */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+:root {
+  --deg: 5deg;
+  --base: #4365c2;
+  --second: #7e8bc6;
+  --trackball: var(--base);
+  --range: 0%;
+  --bg: #10252f;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 300px;
+	position: relative;
+  }
+
+  input[type="range"]:focus{
+	outline: none;
+  }
+
+  input[type="range"]::before{
+	position: absolute;
+	  content: "";
+	  width: var(--range);
+	  height: 2px;
+	  background: var(--second);
+  }
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--base);
+  height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: none;
+  -webkit-appearance: none;
+  background-color: var(--trackball);
+  margin-top: -3.5px;
+  position: relative;
+  transition: 0.5s all ease;
+}
+
+#value {
+  position: absolute;
+  /* left: var(--range); */
+  top: 45%;
+  font-size: 25px;
+  color: var(--trackball);
+  transition: 0.5s color ease;
+}
+
+.setScore{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 100px;
+	width: 100px;
+}

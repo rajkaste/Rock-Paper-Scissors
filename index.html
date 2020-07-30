@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="rps.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- buttons for user-->
+        <div class='buttons'>
+            <div class='players'>Player</div>
+            <div class='left'>
+                rock
+                <button class='choice' value='rock'>
+                    <i class="fas fa-hand-rock"></i>
+                </button>
+
+                paper
+                <button class='choice' value='paper'>
+                    <i class="far fa-sticky-note"></i>
+                </button>
+            </div>
+            <div class="right">
+                scissor
+                <button class='choice' value='scissor'>
+                    <i class="fas fa-hand-scissors"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- scoreboard display-->
+        <div class='scoreboard'>
+            <button id='reset'>
+                <i class="fas fa-undo-alt"></i>
+            </button>
+
+            <div class = 'displayScore'>
+                <p>Player:</p><span id='p1Score'>0</span>
+                <p>Computer:</p><span id='p2Score'>0</span>
+            </div>
+
+            <div class='setScore'>
+                <input id="range" type="range" value="4" min="0" max="10">
+                <label for="range" id="value"></label>
+            </div>
+            <div class='maxScore'>
+                <h2>Playing To:<span>0</span></h2>
+            </div>
+        </div>
+
+        <!-- dummy buttons for computers-->
+        <div class='buttons'>
+            <div class='players'>Computer</div>
+
+            <div class='left'>
+                rock
+                <button>
+                    <i class="fas fa-hand-rock"></i>
+                </button>
+
+                paper
+                <button>
+                    <i class="far fa-sticky-note"></i>
+                </button>
+            </div>
+            <div class="right">
+                scissor
+                <button>
+                    <i class="fas fa-hand-scissors"></i>
+                </button>
+            </div>
+        </div>
+</div>
+
+<!-- popup box-->
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="togglePopup()">&times;</div>
+    </div>
+  </div>
+    <script src="app.js"></script>
+</body>
+</html>
